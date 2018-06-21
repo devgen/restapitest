@@ -22,8 +22,10 @@ public class ShoppingcardTest {
 	@Test
 	public void testTransferShoppuingCard() {
 		
-		given().body().
-		post("/junitrestweb/webapi/employee/12");
+		
+		
+//		given().body().
+//		post("/junitrestweb/webapi/employee/12");
 		
 	
 
