@@ -4,12 +4,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import  io.restassured.RestAssured;
-import static io.restassured.RestAssured.get;
+import static io.restassured.RestAssured.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-
-
-
+import javax.ws.rs.POST;
 
 
 public class ShoppingcardTest {
@@ -24,23 +22,13 @@ public class ShoppingcardTest {
 	@Test
 	public void testTransferShoppuingCard() {
 		
+		given().body().
+		post("/junitrestweb/webapi/employee/12");
 		
-		
-		get("/junitrestweb/webapi/employee/12")
-		.then()
-		.body("id", equalTo(12))
-		.body("firstName", equalTo("Vinod"))
-		.body("lastName", equalTo("Kashyap"))
-		.body("designation", equalTo("CEO"));
+	
 
 	}
 
-	private String login() {
-		
-		
-		RestAssured.given().queryParam("", "").when().get("api/v0/users/login/").then().
-		extract().response().as(TokenResponse.class);
 
-	}
 
 }
