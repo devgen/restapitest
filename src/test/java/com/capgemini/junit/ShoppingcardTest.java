@@ -64,8 +64,8 @@ public class ShoppingcardTest {
 		 **/
 		// TODO klären scheitert und token auslesen bei headern dann setzen
 		Map<String, String> parameters = new HashMap<>();
-		parameters.put("email", "bsh-cart@tillhub.de");
-		parameters.put("password", "bsh1234");
+		parameters.put("email", "XXX"); //TODO set login
+		parameters.put("password", "XXX"); //TODO Set password
 
 		// need to read token
 		RequestSpecification httpRequest = RestAssured.given();
